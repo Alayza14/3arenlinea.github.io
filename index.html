@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3AR en Linea</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="background-music" src="background-music.mp3" loop></audio>
+
+    <div id="home-screen" class="screen">
+        <h1>3AR en Linea</h1>
+        <button class="btn" onclick="startGame('player')">Jugar Contra Jugador</button>
+        <button class="btn" onclick="startGame('machine')">Jugar Contra Máquina</button>
+        <button class="btn" onclick="showInstructions()">Instrucciones</button>
+    </div>
+    <div id="game-screen" class="screen hidden">
+        <h1>3AR en Linea</h1>
+        <div id="game-board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+        <button class="btn" onclick="restartGame()">Reiniciar</button>
+        <button class="home-btn" onclick="goHome()">
+            <img src="home-icon.png" alt="Home">
+        </button>
+    </div>
+    <div id="instructions-screen" class="screen hidden">
+        <h2>Instrucciones</h2>
+        <p>El objetivo del juego es alinear tres símbolos iguales (X o O) en una fila, columna o diagonal.</p>
+        <button class="btn" onclick="goHome()">Volver</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
